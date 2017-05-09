@@ -1,0 +1,302 @@
+{
+	"metadata": {
+		"version": "V0.8.9.26 Alpha",
+		"type": "NunuProgram"
+	},
+	"geometries": [
+		{
+			"uuid": "EDC8BD76-F952-4312-826E-2738BDF7C92B",
+			"type": "SphereBufferGeometry",
+			"name": "geometry",
+			"radius": 1,
+			"widthSegments": 32,
+			"heightSegments": 32
+		},
+		{
+			"uuid": "1429105E-13D6-46E9-BAB9-D41DDA569BD6",
+			"type": "BoxBufferGeometry",
+			"name": "geometry",
+			"width": 1,
+			"height": 1,
+			"depth": 1
+		}],
+	"materials": [
+		{
+			"uuid": "E0B3FBE7-0CF6-4FF5-AA86-DEE15E90CF0C",
+			"type": "MeshStandardMaterial",
+			"name": "default",
+			"depthFunc": 3,
+			"depthTest": true,
+			"depthWrite": true,
+			"color": 16777215,
+			"roughness": 0.6,
+			"metalness": 0.2,
+			"emissive": 0,
+			"aoMapIntensity": 1,
+			"skinning": false,
+			"morphTargets": false,
+			"morphNormals": false
+		},
+		{
+			"uuid": "694FC408-5A50-440C-A761-34B03C896854",
+			"type": "MeshStandardMaterial",
+			"name": "ball",
+			"depthFunc": 3,
+			"depthTest": true,
+			"depthWrite": true,
+			"color": 16724016,
+			"roughness": "0.26",
+			"metalness": "0",
+			"emissive": 0,
+			"aoMapIntensity": 1,
+			"skinning": false,
+			"morphTargets": false,
+			"morphNormals": false
+		},
+		{
+			"uuid": "16FD8B2C-C3F4-4242-89D6-A43A4D19FB61",
+			"type": "MeshStandardMaterial",
+			"name": "ground",
+			"depthFunc": 3,
+			"depthTest": true,
+			"depthWrite": true,
+			"color": 65475,
+			"roughness": "0.19",
+			"metalness": "0",
+			"emissive": 0,
+			"aoMapIntensity": 1,
+			"skinning": false,
+			"morphTargets": false,
+			"morphNormals": false
+		}],
+	"textures": [],
+	"images": [],
+	"videos": [],
+	"audio": [],
+	"fonts": [],
+	"object": {
+		"uuid": "FA8DBA30-D1C9-459F-AA9B-DB1758C37FEC",
+		"type": "Program",
+		"name": "program",
+		"folded": false,
+		"hidden": false,
+		"castShadow": false,
+		"receiveShadow": false,
+		"visible": true,
+		"matrixAutoUpdate": false,
+		"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+		"children": [
+			{
+				"uuid": "7FAA1527-4EF2-4B24-BADB-749D97B4F2B0",
+				"type": "Scene",
+				"name": "scene",
+				"folded": false,
+				"hidden": false,
+				"castShadow": false,
+				"receiveShadow": false,
+				"visible": true,
+				"matrixAutoUpdate": false,
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+				"children": [
+					{
+						"uuid": "FEC10FB5-5049-4AE3-AFF6-3DCE90937927",
+						"type": "Sky",
+						"name": "sky",
+						"folded": false,
+						"hidden": false,
+						"castShadow": false,
+						"receiveShadow": false,
+						"visible": true,
+						"matrixAutoUpdate": true,
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+						"children": [],
+						"colorTop": [7844859,30463,220086,9273],
+						"colorBottom": [15461606,16777215,16705495,26023],
+						"sunColor": 16777130,
+						"moonColor": 5592507,
+						"autoUpdate": false,
+						"sunDistance": 100,
+						"dayTime": 120,
+						"time": 75,
+						"sun": {
+							"shadow": {
+								"bias": 0,
+								"radius": 1,
+								"mapSize": {
+									"x": 512,
+									"y": 512
+								},
+								"camera": {
+									"top": 8,
+									"bottom": -8,
+									"far": 10000,
+									"near": 0.5,
+									"left": -10,
+									"right": 10
+								}
+							}
+						}
+					},
+					{
+						"uuid": "FAC9B1DA-6307-4C15-8689-F662633213C8",
+						"type": "Physics",
+						"name": "sphere",
+						"folded": false,
+						"hidden": false,
+						"castShadow": false,
+						"receiveShadow": false,
+						"visible": true,
+						"matrixAutoUpdate": true,
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,1.0088661138240642,2.8558933603268146,7.163343119824951,1],
+						"children": [
+							{
+								"uuid": "6EF1365E-CE5C-42AD-A65E-238FC323572E",
+								"type": "Mesh",
+								"name": "sphere",
+								"folded": false,
+								"hidden": false,
+								"castShadow": true,
+								"receiveShadow": true,
+								"visible": true,
+								"matrixAutoUpdate": true,
+								"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+								"geometry": "EDC8BD76-F952-4312-826E-2738BDF7C92B",
+								"material": "694FC408-5A50-440C-A761-34B03C896854"
+							}],
+						"body": {
+							"type": 1,
+							"mass": 1,
+							"linearDamping": 0.01,
+							"angularDamping": 0.01,
+							"allowSleep": true,
+							"sleepSpeedLimit": 0.1,
+							"sleepTimeLimit": 1,
+							"collisionFilterGroup": 1,
+							"collisionFilterMask": 1,
+							"fixedRotation": false,
+							"shapes": [
+								{
+									"type": 1,
+									"radius": 1.000000038125435
+								}]
+						}
+					},
+					{
+						"uuid": "3E1D1019-CB13-4FA6-96D8-83028840560C",
+						"type": "Physics",
+						"name": "ground",
+						"folded": false,
+						"hidden": false,
+						"castShadow": false,
+						"receiveShadow": false,
+						"visible": true,
+						"matrixAutoUpdate": true,
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+						"children": [
+							{
+								"uuid": "BE863791-D2A0-4747-925F-76ED9853D949",
+								"type": "Mesh",
+								"name": "ground",
+								"folded": false,
+								"hidden": false,
+								"castShadow": true,
+								"receiveShadow": true,
+								"visible": true,
+								"matrixAutoUpdate": true,
+								"matrix": [20,0,0,0,0,1,0,0,0,0,20,0,0,0,0,1],
+								"geometry": "1429105E-13D6-46E9-BAB9-D41DDA569BD6",
+								"material": "16FD8B2C-C3F4-4242-89D6-A43A4D19FB61"
+							}],
+						"body": {
+							"type": 2,
+							"mass": 1,
+							"linearDamping": 0.01,
+							"angularDamping": 0.01,
+							"allowSleep": true,
+							"sleepSpeedLimit": 0.1,
+							"sleepTimeLimit": 1,
+							"collisionFilterGroup": 1,
+							"collisionFilterMask": 1,
+							"fixedRotation": false,
+							"shapes": [
+								{
+									"type": 4,
+									"halfExtents": {
+										"x": 10,
+										"y": 0.5,
+										"z": 10
+									}
+								}]
+						}
+					},
+					{
+						"uuid": "EC55A9CE-6197-449E-B037-0A7214CE3F2F",
+						"type": "DirectionalLight",
+						"name": "directional",
+						"folded": false,
+						"hidden": false,
+						"castShadow": true,
+						"visible": true,
+						"matrixAutoUpdate": true,
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,1,0,1],
+						"color": 4473924,
+						"intensity": 1,
+						"shadow": {
+							"bias": 0,
+							"radius": 1,
+							"mapSize": {
+								"x": 512,
+								"y": 512
+							},
+							"camera": {
+								"top": 5,
+								"bottom": -5,
+								"far": 10000,
+								"near": 0.5,
+								"left": -5,
+								"right": 5
+							}
+						}
+					},
+					{
+						"uuid": "D8054426-4492-4E26-9D73-70049FCE8DD6",
+						"type": "Script",
+						"name": "script",
+						"folded": false,
+						"hidden": false,
+						"castShadow": false,
+						"receiveShadow": false,
+						"visible": true,
+						"matrixAutoUpdate": true,
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+						"code": "var player;\n\nfunction initialize() {\n\n    //「球体」オブジェクト名（sphere）を指定し、要素を取得する\n    player = scene.getObjectByName( 'sphere' ).body;\n\n}\n\n\nfunction update() {\t\n\t\n\tif( Keyboard.keyPressed( Keyboard.A ) ) {\n\t\tplayer.velocity.x -= 0.4; //「Aキー」が押されたら左へ移動\n\t}\n\n\n\tif( Keyboard.keyPressed( Keyboard.D ) ) {\n\t\tplayer.velocity.x += 0.4; //「Dキー」が押されたら右へ移動\n\t}\n\n\n\tif( Keyboard.keyPressed( Keyboard.W ) ) {\n\t\tplayer.velocity.z -= 0.4; //「Wキー」が押されたら前へ移動\n\t}\n\n\n\tif( Keyboard.keyPressed( Keyboard.S ) ) {\n\t\tplayer.velocity.z += 0.4; //「Sキー」が押されたら後ろへ移動\n\t}\n\n\t\n\tif( Keyboard.keyJustPressed( Keyboard.SPACEBAR ) ) {\n\t\tplayer.velocity.y += 5; //「スペースバー」が押されたらジャンプ\n\t}\n\n}"
+					}],
+				"cameras": [],
+				"world": {
+					"gravity": {
+						"x": 0,
+						"y": -9.8,
+						"z": 0
+					},
+					"quatNormalizeSkip": 0,
+					"quatNormalizeFast": false,
+					"solver": {
+						"tolerance": 0.05,
+						"iterations": 7
+					}
+				}
+			}],
+		"author": "",
+		"description": "",
+		"version": "0",
+		"lockPointer": false,
+		"vr": false,
+		"vrScale": 1,
+		"antialiasing": false,
+		"shadows": true,
+		"shadowsType": 2,
+		"toneMapping": 0,
+		"toneMappingExposure": 1,
+		"toneMappingWhitePoint": 1
+	}
+}
